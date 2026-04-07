@@ -1,0 +1,38 @@
+body {
+  margin:0;
+  overflow:hidden;
+  background:black;
+  font-family:monospace;
+}
+
+#hud {
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  color:#0ff;
+}
+
+#hpBar {
+  width:200px;
+  height:20px;
+  background:#300;
+}
+
+#hpBar::after {
+  content:'';
+  display:block;
+  height:100%;
+  width:100%;
+  background:#0f0;
+}
+
+#ammo {
+  margin-top:10px;
+}
+
+.nametag {
+  color:white;
+  font-size:12px;
+  background:rgba(0,0,0,0.5);
+  padding:2px;
+}
