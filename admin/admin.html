@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin</title>
+<script src="https://cdn.ably.com/lib/ably.min-1.js"></script>
+</head>
+
+<body>
+<h1>Admin Panel</h1>
+
+<input id="credit" placeholder="クレジット">
+<button onclick="send()">送信</button>
+
+<script>
+const client = new Ably.Realtime("JW3Hvw.fw1o0A:-zV3VatQkBUx-hVmtwFGE6Bwbv_wG4kIoz7LHOKNawY");
+const channel = client.channels.get("game");
+
+function send(){
+  const credit = document.getElementById("credit").value;
+  channel.publish("admin",{credit});
+}
+</script>
+</body>
+</html>
